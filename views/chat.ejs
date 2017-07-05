@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Chat
+        </title>
+        <link href="/stylesheets/style.css" rel="stylesheet"/>
+        <link href="/stylesheets/chatter.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="chatter-chat">
+        <header>
+            <span class="heading">
+                Chatter <span class="heading-info">(<span id="onlineCount">1</span> online)</span>
+            </span>
+        </header>
+        <main>
+            <div class="chat-window" id="chats">
+
+            </div>
+            <div class="spacer">
+            </div>
+            <div class="typing-window">
+                <textarea class="chat-input" id="userMsg"></textarea>
+                <button class="chat-input-submit" id="btnSubmit">
+                    <span class="material-icons">
+                        send
+                    </span>
+                </button>
+            </div>
+        </main>
+    </body>
+    <script>
+            window.chatter = {
+    	username: '<%= username %>'
+    }
+    </script>
+    <script src="/socket.io/socket.io.js">
+    </script>
+    <script src="/javascripts/chat.js">
+    </script>
+</html>
